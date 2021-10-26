@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1d4c8f89c.js" crossorigin="anonymous"></script>
+    <!-- Box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dark Mode Light Mode</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/Logo.png" alt="" id="logo-img">
+            <a href="#" id="logo-text">TheKiet</a>
+        </div>
+        
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">CONTACT ME</a></li>
+        </ul>
+
+        <div id="Mode">
+            <div id="switch"></div>
+            <label id="inner-text">Dark</label>
+        </div>
+    </nav>
+
+    <div class="main">
+        
+        <div class="left-column">
+            <div class="img-box">
+                <img src="img/Pattern.png" alt="" class="img-back">
+                <img src="img/Portrait.png" alt="" class="img-main">
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            <div class="content">
+                <h1>HI. I'M <span>THE KIET</span> </h1>
+                <P>A <span>Front-End Web Developer</span> passionate about <br>
+                    creating interactive applications and experiences on the web</P>
+                
+                <button>Contact Me</button>
+
+                <div class="social-link">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-behance-square"></i></a>
+                    <a href="#"><i class="fab fa-dribbble-square"></i></a>
+                </div>
+            </div>
+    
+            
+        </div>
+    </div>
+
+    <script>
+        //const Mode_icon = document.getElementById('Mode');
+        const Switch_Mode = document.getElementById('switch');
+        const Inner_text = document.getElementById('inner-text');
+        Mode.onclick = function(){
+            document.body.classList.toggle('dark-mode');
+            Switch_Mode.classList.toggle('switch-active');
+            Inner_text.classList.toggle('Inner-text-active');
+            if(document.body.classList.contains('dark-mode')){
+                Inner_text.innerHTML = 'Light';
+            }
+            else{
+                Inner_text.innerHTML = 'Dark';
+            }
+        }
+
+    </script>
+    
+
+</body>
+
+</html>
